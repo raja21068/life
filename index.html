@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wellness Hub</title>
+  <style>
+    /* Base Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(120deg, #f6f9fc, #e9eff4);
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 2.5rem;
+      color: #2c3e50;
+    }
+
+    /* Container Styling */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    /* Card Styling */
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      margin: 15px;
+      width: 300px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card-content h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #34495e;
+    }
+
+    .card-content p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #7f8c8d;
+    }
+
+    .card-content .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: background 0.3s ease;
+    }
+    .card-content .btn:hover {
+      background: #2980b9;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .card {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .card-content h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Wellness Hub</h1>
+  <div class="container">
+    <!-- Card 1: Workout -->
+    <div class="card">
+      <img src="images/1.jpg" alt="Workout">
+      <div class="card-content">
+        <h2>Workout / Exercise </h2>
+        <p>Boost your energy and build strength with our tailored workout plans.</p>
+        <a href="https://raja21068.github.io/workout/" class="btn" >Explore More</a>
+      </div>
+    </div>
+
+    <!-- Card 2: Yoga -->
+    <div class="card">
+      <img src="images/4.jpg" alt="Yoga">
+      <div class="card-content">
+        <h2>Meditation / Yoga</h2>
+        <p>Find inner peace and flexibility with our guided yoga sessions.</p>
+        <a href="https://raja21068.github.io/yoga/" class="btn" >Explore More</a>
+      </div>
+    </div>
+
+    <!-- Card 3: Relaxing Music -->
+    <div class="card">
+      <img src="images/5.jpg" alt="Relaxing Music">
+      <div class="card-content">
+        <h2>Relaxing Music</h2>
+        <p>Unwind with our curated collection of soothing tunes.</p>
+        <a href="https://raja21068.github.io/music/" class="btn" >Explore More</a>
+      </div>
+    </div>
+
+    <!-- Card 4: Skincare -->
+    <div class="card">
+      <img src="images/6.jpg" alt="Skincare">
+      <div class="card-content">
+        <h2>Skincare</h2>
+        <p>Glow up with personalized skincare tips and courses.</p>
+        <a href="https://raja21068.github.io/skin/" class="btn" >Explore More</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
