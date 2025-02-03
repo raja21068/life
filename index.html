@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wellness Hub</title>
+  <title>Health and Beauty</title>
   <style>
     /* Base Styling */
     * {
@@ -16,11 +16,9 @@
       background: linear-gradient(120deg, #f6f9fc, #e9eff4);
       color: #333;
     }
-    h1 {
-      text-align: center;
-      margin: 20px 0;
-      font-size: 2.5rem;
-      color: #2c3e50;
+    canvas {
+      display: block;
+      margin: 20px auto;
     }
 
     /* Container Styling */
@@ -35,52 +33,54 @@
     .card {
       background: #fff;
       border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
       margin: 15px;
-      width: 300px;
+      width: 320px;
       overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
     .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+      transform: translateY(-12px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     }
 
     .card img {
       width: 100%;
-      height: 200px;
+      height: 220px;
       object-fit: cover;
     }
 
     .card-content {
-      padding: 20px;
+      padding: 25px;
       text-align: center;
     }
 
     .card-content h2 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-      color: #34495e;
+      font-size: 2rem;
+      margin-bottom: 12px;
+      color: #c0392b;
+      font-weight: bold;
     }
 
     .card-content p {
-      font-size: 1rem;
-      line-height: 1.5;
+      font-size: 1.1rem;
+      line-height: 1.6;
       color: #7f8c8d;
     }
 
     .card-content .btn {
       display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: #3498db;
+      margin-top: 18px;
+      padding: 12px 25px;
+      background: #e74c3c;
       color: #fff;
       text-decoration: none;
-      border-radius: 25px;
+      border-radius: 30px;
+      font-size: 1.1rem;
       transition: background 0.3s ease;
     }
     .card-content .btn:hover {
-      background: #2980b9;
+      background: #c0392b;
     }
 
     /* Responsive Design */
@@ -91,25 +91,23 @@
     }
 
     @media (max-width: 480px) {
-      h1 {
-        font-size: 2rem;
-      }
       .card-content h2 {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
       }
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to Wellness Hub</h1>
+  <canvas id="headingCanvas" width="800" height="150"></canvas>
+
   <div class="container">
     <!-- Card 1: Workout -->
     <div class="card">
       <img src="images/1.jpg" alt="Workout">
       <div class="card-content">
-        <h2>Workout / Exercise </h2>
+        <h2>Workout / Exercise</h2>
         <p>Boost your energy and build strength with our tailored workout plans.</p>
-        <a href="https://raja21068.github.io/workout/" class="btn" >Explore More</a>
+        <a href="https://raja21068.github.io/workout/" class="btn" target="_blank">Explore More</a>
       </div>
     </div>
 
@@ -119,7 +117,7 @@
       <div class="card-content">
         <h2>Meditation / Yoga</h2>
         <p>Find inner peace and flexibility with our guided yoga sessions.</p>
-        <a href="https://raja21068.github.io/yoga/" class="btn" >Explore More</a>
+        <a href="https://raja21068.github.io/yoga/" class="btn" target="_blank">Explore More</a>
       </div>
     </div>
 
@@ -129,7 +127,7 @@
       <div class="card-content">
         <h2>Relaxing Music</h2>
         <p>Unwind with our curated collection of soothing tunes.</p>
-        <a href="https://raja21068.github.io/music/" class="btn" >Explore More</a>
+        <a href="https://raja21068.github.io/music/" class="btn" target="_blank">Explore More</a>
       </div>
     </div>
 
@@ -139,9 +137,33 @@
       <div class="card-content">
         <h2>Skincare</h2>
         <p>Glow up with personalized skincare tips and courses.</p>
-        <a href="https://raja21068.github.io/skin/" class="btn" >Explore More</a>
+        <a href="https://raja21068.github.io/skin/" class="btn" target="_blank">Explore More</a>
       </div>
     </div>
   </div>
+
+  <script>
+    const canvas = document.getElementById('headingCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Gradient for text
+    const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+    gradient.addColorStop(0, '#3498db');
+    gradient.addColorStop(0.5, '#e74c3c');
+    gradient.addColorStop(1, '#2ecc71');
+
+    ctx.fillStyle = gradient;
+    ctx.font = 'bold 48px Arial';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.shadowColor = 'rgba(0, 0, 0, 0.3)';
+    ctx.shadowBlur = 8;
+    ctx.fillText('Health & Beauty', canvas.width / 2, 50);
+
+    // Add "GALLERIA" below the main heading
+    ctx.font = 'bold 36px Arial';
+    ctx.fillStyle = '#3498db';
+    ctx.fillText('GALLERIA', canvas.width / 2, 100);
+  </script>
 </body>
 </html>
